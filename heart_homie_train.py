@@ -6,7 +6,7 @@ from sklearn.ensemble import RandomForestClassifier
 
 #read date for training ml model from file location below 
 #downloaded from https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction/data (open source)
-train_data = pandas.read_csv("C:\\Users\\Jaeden K\\Desktop\\python stuff\\health homie\\heart.csv")
+train_data = pandas.read_csv("C:\\Users\\Jaeden K\\Desktop\\python stuff\\heart_homie\\heart.csv")
 
 
 #set the variable for the column in the dataset that the program is trying to predict
@@ -28,6 +28,6 @@ model.fit(X, y)
 # loading library
 import pickle
 # create an iterator object with write permission - model.pkl
-files=open('C:\\Users\\Jaeden K\\Desktop\\python stuff\\health homie\\model.pkl', 'wb')  
+files=open('C:\\Users\\Jaeden K\\Desktop\\python stuff\\heart_homie\\model.pkl', 'wb')  
 pickle.dump(model, files)
 
