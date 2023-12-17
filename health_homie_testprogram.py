@@ -5,7 +5,7 @@ import pandas # data processing, CSV file I/O (e.g. pandas.read_csv)
 from sklearn.ensemble import RandomForestClassifier
 
 # load saved model from health_homie_train.py
-files=open('C:\\Users\\Jaeden K\\Desktop\\python stuff\\health homie\\model.pkl', 'rb')
+files=open('C:\\Users\\Jaeden K\\Desktop\\python stuff\\heart_homie\\model.pkl', 'rb')
 model = pickle.load(files)
 #these are features from the dataset that the program will use to predict "HeartDisease"
 features = ["Age", "RestingBP","Cholesterol", "FastingBS", "MaxHR", "Sex", "ChestPainType", "RestingECG", "ExerciseAngina", "ST_Slope" ]
@@ -15,7 +15,7 @@ category_features = ["Sex", "ChestPainType", "RestingECG", "ExerciseAngina", "ST
 
 
 #this is the file location that the test data is read from (I took the last 21 lines out of the train_data)
-test_data = pandas.read_csv("C:\\Users\\Jaeden K\\Desktop\\python stuff\\health homie\\test1.csv")
+test_data = pandas.read_csv("C:\\Users\\Jaeden K\\Desktop\\python stuff\\heart_homie\\test1.csv")
 
 #making dummy variables for the testing data (we did this for the train data earlier)
 X_test = pandas.get_dummies(test_data[features], columns=category_features)
